@@ -1,0 +1,7 @@
+--->>  Ep1   
+- ติดตั้ง packet ทั้งหมดที่ใช้ -->  npm install express body-parser mongoose cors morgan nodemon  dotenv  
+- ติดตั้ง package.json บันทึก module ที่ใช้ -->  npm init -y
+
+---------------------------------------------------
+--->>  Ep2
+- Get  Publish  
