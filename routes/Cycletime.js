@@ -5,26 +5,7 @@ const router = express.Router();
 
 // กำหนด Schema ของ Cyctime
 const CyctimeSchema = new mongoose.Schema({
-  input_1: Number,
-  input_2: Number,
-  input_3: Number,
-  input_4: Number,
-  input_5: Number,
-  input_6: Number,
-  input_7: Number,
-  input_8: Number,
-  input_9: Number,
-  input_10: Number,
-  input_11: Number,
-  input_12: Number,
-  input_13: Number,
-  input_14: Number,
-  input_15: Number,
-  input_16: Number,
-  Machine: String,
-  Robot3Axis: String,
-  Robot6Axis: String,
-  MC_id: String,
+ 
   // สามารถเพิ่มฟิลด์อื่น ๆ ตามที่จำเป็น
 });
 
