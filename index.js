@@ -28,6 +28,10 @@ readdirSync('./routes').map(async (r) => {
   const route = await import(`./routes/${r}`);
   app.use('/api', route.default);
 });
+readdirSync('./MC22').map(async (r) => {
+  const route = await import(`./MC22/${r}`);
+  app.use('/MC22', route.default);
+});
 
 // สร้าง HTTP Server
 const server = http.createServer(app);
