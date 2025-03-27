@@ -32,7 +32,7 @@ const Data_set_MC22Schema = new mongoose.Schema({
 const Data_set_MC22 = mongoose.model('Data_set_MC22', Data_set_MC22Schema, 'Data_set_MC22');
 
 // Route ที่ดึงข้อมูลจาก MongoDB
-router.get('/Data_set_MC22', async (req, res) => {
+router.get('/Data_Alarm_MC22', async (req, res) => {
   try {
     const alarms = await Data_set_MC22.find(); // ดึงข้อมูลทั้งหมดจาก collection
     res.json(alarms);
@@ -41,18 +41,5 @@ router.get('/Data_set_MC22', async (req, res) => {
   }
 });
 
-router.post('/input_realtime', async (req, res) => {
-  try {
-    const { data } = req.body;
-    console.log(data);
-    const newAlarm = new Data_set_MC22(data); // สร้างเอกสารใหม่จากข้อมูลที่ได้รับใน req.body
-    const savedAlarm = await newAlarm.save(); // บันทึกลงใน MongoDB
 
-    res.status(201).json(savedAlarm); // ส่งข้อมูลที่บันทึกกลับไปยังไคลเอนต์
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-// แทนที่ module.exports ด้วย export default
 export default router;
